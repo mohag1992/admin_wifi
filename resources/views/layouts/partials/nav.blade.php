@@ -39,7 +39,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="/dashboard">Super Admin</a>
-                <a class="navbar-brand hidden" href="/dashboard">Super Admin</a>
+                <!-- <a class="navbar-brand hidden" href="/dashboard">Super Admin</a> -->
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -55,6 +55,15 @@
                             <li><i class="fa fa-id-badge"></i><a href="/backend/event">Event List</a></li>
                            
                         </ul>
+
+
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>User</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-puzzle-piece"></i><a href="/backend/event/create">User Entry</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="/backend/event">User List</a></li>
+                           
+                        </ul>
+
                     </li>
                       
 

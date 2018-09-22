@@ -11,9 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/dashboard','Backend\AuthController@dashboard');
+
+ Route::group(['prefix' => 'backend'], function () {
+ 	Route::get('/register','Backend\AuthController@register');
+ 	Route::get('/','Backend\AuthController@showlogin');
+ 	Route::post('/user/dologin','Backend\AuthController@dologin');
+ 	Route::get('/event/create','Backend\EventController@create');
+ 	Route::post('/event/store','Backend\EventController@store');
+ 	Route::get('/event','Backend\EventController@index');
+ 	Route::get('/event/edit/{id}','Backend\EventController@edit');
+ 	Route::post('/event/update','Backend\EventController@update');
+
+ 	Route::get('/api/events','Backend\EventController@geteventbyweek');
+
+ });
 
 Route::get('firebase','FirebaseController@index');
 Route::get('user/{name?}', function ($name = 'John') {

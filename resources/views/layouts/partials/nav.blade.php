@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Super Admin</title>
+    <title> Admin</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -38,7 +38,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="/dashboard">Super Admin</a>
+                <a class="navbar-brand" href="/dashboard"> Admin</a>
                 <!-- <a class="navbar-brand hidden" href="/dashboard">Super Admin</a> -->
             </div>
 
@@ -47,9 +47,9 @@
                     <li class="active">
                         <a href="/dashboard"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
-                    <h3 class="menu-title">UI elements</h3><!-- /.menu-title -->
+                    <h3 class="menu-title"> elements</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Components</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Events</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="/backend/event/create">Event Entry</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="/backend/event">Event List</a></li>
@@ -57,12 +57,13 @@
                         </ul>
 
 
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>User</a>
+                        <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Employees</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="/backend/event/create">User Entry</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="/backend/event">User List</a></li>
-                           
+                            <li><i class="fa fa-user"></i><a href="backend/user">Employees List</a></li>
+                            <li><i class="fa fa-user"></i><a href="backend/leaves">Employees Leaves</a></li>
                         </ul>
+                         </li>
 
                     </li>
                       

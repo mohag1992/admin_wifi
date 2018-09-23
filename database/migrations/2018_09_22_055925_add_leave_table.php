@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class AddLeaveTable extends Migration
 {
@@ -15,7 +16,8 @@ class AddLeaveTable extends Migration
     {
         Schema::create('leaves', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->integer('user_id');
+            $table->string('name')->nullable();
             $table->string('email');
             $table->date('date');
             $table->string('reason');

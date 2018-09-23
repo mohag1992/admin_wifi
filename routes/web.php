@@ -22,7 +22,9 @@ Route::get('/dashboard','Backend\AuthController@dashboard');
  	Route::get('/event','Backend\EventController@index');
  	Route::get('/event/edit/{id}','Backend\EventController@edit');
  	Route::post('/event/update','Backend\EventController@update');
+ 	Route::get('/leaves','Backend\LeaveController@index');
  	Route::get('/api/events','Backend\EventController@geteventbyweek');
+ 	// Route::get('/department/create','Backend\DepartmentController@create');
 
  	Route::get('/user','Backend\UserController@index');
 

@@ -32,17 +32,10 @@ $firebase = (new Factory)
 
 $database = $firebase->getDatabase();
 
+
 $newPost = $database
 
-->getReference('blog/posts')
-
-->push([
-
-'title' => 'Post title',
-
-'body' => 'This should probably be longer.'
-
-]);
+->getReference('AddendenceUser');
 
 //$newPost->getKey(); // => -KVr5eu8gcTv7_AHb-3-
 

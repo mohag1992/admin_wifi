@@ -13,10 +13,27 @@ class UserController extends Controller
     	$transdate = date('m', time());
        
 
-       $month = date('m', strtotime($transdate));
-// ->join('attendance','users.id','=','attendance.user_id')->whereMonth('current_date' , Carbon::today()->month)
-    	$users = DB::table('users')->get();
-    	dd($users);
+        $month = date('m', strtotime($transdate));
+         $attendances = DB::table('attendance')->get();
+
+    	$users = DB::table('users')->where('role_id',2)->get();
+        $userAry = array();
+    	foreach($users as $user){
+
+    		$attend = DB::table('attendance')->where('user_id',$user->id)->count();
+            $absent = 31-$attend;
+            $persence =round(($attend/31) * 100 );
+            
+            if($absent == 0){
+             $user->percetage = 0;  
+            }else{
+              $user->percetage = $persence;
+            }
+            $user->absent = $absent;
+            $user->count = $attend;
+    	}
+        
+        
 
     	
     	return view('employee',compact('users'));

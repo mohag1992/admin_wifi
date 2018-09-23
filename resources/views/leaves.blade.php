@@ -2,7 +2,6 @@
 @section('title','Event Create')
 @section('content')
 
-
 <div class="content mt-3">
             <div class="animated fadeIn">
                 <div class="row">
@@ -10,7 +9,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Attendance List</strong>
+                            <strong class="card-title">Leave List</strong>
                         </div>
                         <div class="card-body">
                   <table id="bootstrap-data-table" class="table table-striped table-bordered">
@@ -18,19 +17,19 @@
                       <tr>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Attendance Percance</th>
-                        <th>Absent</th>
-                        <th>Present</th>
+                        <th>Reason</th>
+                        <th>Date</th>
+                        <th>Half Day Or Full Day</th>
                       </tr>
                     </thead>
                     <tbody>
-                    @foreach($users as $user)
+                    @foreach($leaves as $leave)
                       <tr>
-                        <td>{{$user->name}}</td>
-                        <td>{{$user->email}}</td>
-                        <td>{{$user->percetage}}</td>
-                        <td>{{$user->absent}}</td>
-                        <td>{{$user->count}}</td>
+                        <td>{{$leave->user_name}}</td>
+                        <td>{{$leave->email}}</td>
+                        <td>{{$leave->reason}}</td>
+                        <td>{{$leave->date}}</td>
+                        <td>{{$leave->half_full_day}}</td>
                       </tr>
                     @endforeach
                       
@@ -48,4 +47,4 @@
 
 
 
-@endsection
+@endsection 

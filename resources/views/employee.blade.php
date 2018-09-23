@@ -25,10 +25,14 @@
                     </thead>
                     <tbody>
                     @foreach($users as $user)
-                      <tr>
+                     @if($user->leave == 1)
+                     <tr style="background: #ea6c59">
+                     @else
+                     <tr>
+                     @endif
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
-                        <td>{{$user->percetage}}</td>
+                        <td>{{$user->percetage}} %</td>
                         <td>{{$user->absent}}</td>
                         <td>{{$user->count}}</td>
                       </tr>

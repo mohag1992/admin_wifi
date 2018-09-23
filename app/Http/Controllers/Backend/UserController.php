@@ -21,13 +21,19 @@ class UserController extends Controller
     	foreach($users as $user){
 
     		$attend = DB::table('attendance')->where('user_id',$user->id)->count();
-            $absent = 31-$attend;
-            $persence =round(($attend/31) * 100 );
+            $absent = 30-$attend;
+            $persence =round(($attend/30) * 100 );
+
             
             if($absent == 0){
-             $user->percetage = 0;  
+             $user->percetage = 100;  
             }else{
               $user->percetage = $persence;
+            }
+            if($absent == 3 || $absent>3){
+              $user->leave = 1;
+            }else{
+              $user->leave = 0;
             }
             $user->absent = $absent;
             $user->count = $attend;

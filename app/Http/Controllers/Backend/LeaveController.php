@@ -24,4 +24,8 @@ class LeaveController extends Controller
     	 return view('leaves',compact('leaves'));
 
     }
+    public function leaechart(){
+        $leaves = DB::table('leaves')->whereNull('created_at')->get();
+        return \Response::json($leaves);
+    }
 }

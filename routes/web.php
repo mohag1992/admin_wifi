@@ -29,6 +29,7 @@ Route::get('/dashboard','Backend\AuthController@dashboard');
  	Route::get('/user','Backend\UserController@index');
 
  	Route::get('/api/leave','Backend\LeaveController@leave');
+ 	Route::get('/api/leave/chart','Backend\LeaveController@leaechart');
 
  });
 
